@@ -60,7 +60,7 @@ GEM
     dm-transactions (1.2.0)
       dm-core (~> 1.2.0)
     dm-types (1.2.2)
-      bcrypt (~> 3.0)
+      bcrypt (~> 3.1.10)
       dm-core (~> 1.2.0)
       fastercsv (~> 1.5)
       json (~> 1.6)
