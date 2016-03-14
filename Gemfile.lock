@@ -119,7 +119,7 @@ GEM
     ruby-openid (2.5.0)
     ruby-openid-apps-discovery (1.2.0)
       ruby-openid (>= 2.1.7)
-	  bcrypt-ruby (3.1.10)
+	  bcrypt-ruby (>1.0)
     rufus-scheduler (2.0.24)
       tzinfo (>= 0.3.22)
     sass (3.2.19)
