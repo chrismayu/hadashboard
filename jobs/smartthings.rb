@@ -1,12 +1,12 @@
 require 'json'
 
 # URI to the installed app root
-host_uri = "http://damp-journey-70161.herokuapp.com"
+host_uri = ENV["DASHING_URI"] || 'http://localhost:3030'
 
 # SmartApp credentials
-client_id = "b51d762c-381e-49b3-843a-84dd7b0a693e"
+client_id = ENV["ST_CLIENT_ID"]
 # Keeping ST_API_KEY for compatibility (was renamed to ST_CLIENT_SECRET)
-client_secret = "9fc9982a-d30d-4274-a336-b18a613e737e"
+client_secret = ENV["ST_CLIENT_SECRET"] || ENV["ST_API_KEY"]
 
 # Create a new STApp instance for communication with the SmartApp
 app = STApp.new(
