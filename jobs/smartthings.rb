@@ -53,12 +53,12 @@ SCHEDULER.every '15m', :first_in => 0 do |job|
       wind_speed: data["current_observation"]["wind_mph"],
       wind_speed_gust: data["current_observation"]["wind_gust_mph"],
       wind_dir: data["current_observation"]["wind_dir"],
-      temp_low: data["forecast"]["simpleforecast"]["forecastday"][0]["low"]["fahrenheit"],
-      temp_high: data["forecast"]["simpleforecast"]["forecastday"][0]["high"]["fahrenheit"],
+      temp_low: data["forecast"]["simpleforecast"]["forecastday"][0]["low"]["celsius"],
+      temp_high: data["forecast"]["simpleforecast"]["forecastday"][0]["high"]["celsius"],
       icon: data["forecast"]["simpleforecast"]["forecastday"][0]["icon"],
       precip: data["forecast"]["simpleforecast"]["forecastday"][0]["pop"],
-      tomorrow_temp_low: data["forecast"]["simpleforecast"]["forecastday"][1]["low"]["fahrenheit"],
-      tomorrow_temp_high: data["forecast"]["simpleforecast"]["forecastday"][1]["high"]["fahrenheit"],
+      tomorrow_temp_low: data["forecast"]["simpleforecast"]["forecastday"][1]["low"]["celsius"],
+      tomorrow_temp_high: data["forecast"]["simpleforecast"]["forecastday"][1]["high"]["celsius"],
       tomorrow_icon: data["forecast"]["simpleforecast"]["forecastday"][1]["icon"],
       tomorrow_precip: data["forecast"]["simpleforecast"]["forecastday"][1]["pop"]})
   end
