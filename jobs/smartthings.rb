@@ -48,7 +48,7 @@ SCHEDULER.every '15m', :first_in => 0 do |job|
   if weather and forecast
     data = JSON.parse(weather).merge JSON.parse(forecast)
     send_event('weather', {
-      now_temp: data["current_observation"]["temp_f"],
+      now_temp: data["current_observation"]["temp_c"],
       humidity: data["current_observation"]["relative_humidity"],
       wind_speed: data["current_observation"]["wind_mph"],
       wind_speed_gust: data["current_observation"]["wind_gust_mph"],
